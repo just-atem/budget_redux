@@ -1,14 +1,14 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
-import ExpenseDashboardPage from '../components/ExpenseDashboard';
+import ExpenseDashboardPage from '../components/ExpenseDashboardPage';
 import AddExpensePage from '../components/AddExpensePage';
 import EditExpensePage from '../components/EditExpense';
 import HelpPage from '../components/HelpPage';
 import Header from '../components/Header';
 import NotFoundPage from '../components/NotFound';
 
-const Approuter = () =>(
+const AppRouter = () =>(
     <BrowserRouter>
     <div>
         <Header />
@@ -22,4 +22,4 @@ const Approuter = () =>(
     </div></BrowserRouter>
 );
 
-export default Approuter;
+export default AppRouter;
