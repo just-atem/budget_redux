@@ -2,7 +2,7 @@ import { createStore, combineReducers } from 'redux';
 import uuid from 'uuid';
  
 //add expense
-const addExpense = (expense = {}) => ({
+const addExpense = (expense = {}) => ({// action creator
     type: 'ADD_EXPENSE',
     expense: {
         id: uuid(),
@@ -147,7 +147,7 @@ const store = createStore(
  
 store.subscribe(() => {
     const state = store.getState();
-   const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
+    const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
    console.log(visibleExpenses);
 });
  
@@ -155,9 +155,9 @@ const expenseOne = store.dispatch(addExpense ({ description: 'Travelling', amoun
 const expenseTwo = store.dispatch(addExpense ({ description: 'Swimming', amount: 1500}));
 const expenseThree = store.dispatch(addExpense ({description: 'Driving', amount: 800}));
 const expenseFour = store.dispatch(addExpense ({description: 'Living', amount: 1300, createdAt: 11000}));
-//store.dispatch(setTextFilter('abe'));
-store.dispatch(sortByAmount());
-store.dispatch(sortByDate());
+store.dispatch(setTextFilter('abe'));
+// store.dispatch(sortByAmount());
+// store.dispatch(sortByDate());
  
  
 
