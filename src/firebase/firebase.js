@@ -9,9 +9,13 @@ var firebaseConfig = {
     messagingSenderId: "912504864777",
     appId: "1:912504864777:web:f2b55990fe0eece368f8d8"
 };
+
 firebase.initializeApp(firebaseConfig);
+
 const database = firebase.database();
- export { firebase, database as default};
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+
+ export { firebase, googleAuthProvider, database as default};
 // database.ref('expenses').push({
 //     description: 'Rent',
 //     note: '',
