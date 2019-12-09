@@ -1,6 +1,6 @@
-import { addExpense, removeExpense, editExpense } from '../../actions/expenses';
+import { addExpense, removeExpense, editExpense } from '../../actions/expenses';//actions
 
-const expenseData = {
+const expenseData = {//test data ---> expense
     id: '123abc',
     description: 'Rent',
     amount: 564400,
@@ -14,6 +14,7 @@ test('should add expense action object with provided values', () => {
         type: 'ADD_EXPENSE',
         expense: expenseData
     });
+    
 });
 //removing
 test('should remove expense action object with provided values', () => {
